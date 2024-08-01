@@ -24,11 +24,12 @@ for i,w in enumerate(omega):
   x = np.linalg.solve(matrix,f)
   x1_real[i] = x[0].real
   x1_imag[i] = x[0].imag
-  x1_abs = np.abs(x[0])**2
+  x1_abs[i] = np.abs(x[0])**2
 
 
 plt.plot(omega,x1_real)
 plt.plot(omega,x1_imag)
+#plt.plot(omega,x1_abs) (optional)
 plt.legend()
 plt.grid(True)
 plt.show()
